@@ -8,6 +8,8 @@ function RandomNumberGenerator() {
     setNumber(randomNum);
   };
 
+  const resetNumber = () => setNumber(null);
+
   return (
     <div className="app-container">
       <div className="generator-card">
@@ -23,6 +25,10 @@ function RandomNumberGenerator() {
 
         <button className="btn generate-btn" onClick={generateNumber}>
           Generate Random Number
+        </button>
+        
+        <button className="btn reset-btn" onClick={resetNumber} disabled={number === null}>
+          Reset
         </button>
       </div>
     </div>
